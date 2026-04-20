@@ -796,6 +796,9 @@
   .items-center {
     align-items: center;
   }
+  .items-start {
+    align-items: flex-start;
+  }
   .justify-between {
     justify-content: space-between;
   }
@@ -937,11 +940,38 @@
   .bg-\[\#\#13335e\] {
     background-color: ##13335e;
   }
+  .bg-\[\#0b336b\] {
+    background-color: #0b336b;
+  }
+  .bg-\[\#0c3b7d\] {
+    background-color: #0c3b7d;
+  }
+  .bg-\[\#0d3e82\] {
+    background-color: #0d3e82;
+  }
+  .bg-\[\#0d3e82b5\] {
+    background-color: #0d3e82b5;
+  }
+  .bg-\[\#1e4b82\] {
+    background-color: #1e4b82;
+  }
+  .bg-\[\#2b4971\] {
+    background-color: #2b4971;
+  }
+  .bg-\[\#2d5f94\] {
+    background-color: #2d5f94;
+  }
+  .bg-\[\#3c5475\] {
+    background-color: #3c5475;
+  }
   .bg-\[\#3f6ca6\] {
     background-color: #3f6ca6;
   }
   .bg-\[\#3f2082\] {
     background-color: #3f2082;
+  }
+  .bg-\[\#124b9b\] {
+    background-color: #124b9b;
   }
   .bg-\[\#203d82\] {
     background-color: #203d82;
@@ -952,8 +982,20 @@
   .bg-\[\#13335e\] {
     background-color: #13335e;
   }
+  .bg-\[\#20416c\] {
+    background-color: #20416c;
+  }
+  .bg-\[\#26436a\] {
+    background-color: #26436a;
+  }
+  .bg-\[\#32527d\] {
+    background-color: #32527d;
+  }
   .bg-\[\#53309e\] {
     background-color: #53309e;
+  }
+  .bg-\[\#304869\] {
+    background-color: #304869;
   }
   .bg-\[\#325684\] {
     background-color: #325684;
@@ -1166,6 +1208,9 @@
   .py-3 {
     padding-block: calc(var(--spacing) * 3);
   }
+  .py-4 {
+    padding-block: calc(var(--spacing) * 4);
+  }
   .py-5 {
     padding-block: calc(var(--spacing) * 5);
   }
@@ -1197,6 +1242,9 @@
   }
   .pl-6 {
     padding-left: calc(var(--spacing) * 6);
+  }
+  .text-center {
+    text-align: center;
   }
   .text-2xl {
     font-size: var(--text-2xl);
@@ -1317,6 +1365,17 @@
     transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
     transition-duration: var(--tw-duration, var(--default-transition-duration));
   }
+  .delay-100 {
+    transition-delay: 100ms;
+  }
+  .duration-100 {
+    --tw-duration: 100ms;
+    transition-duration: 100ms;
+  }
+  .duration-150 {
+    --tw-duration: 150ms;
+    transition-duration: 150ms;
+  }
   .duration-200 {
     --tw-duration: 200ms;
     transition-duration: 200ms;
@@ -1328,6 +1387,20 @@
         --tw-scale-y: 105%;
         --tw-scale-z: 105%;
         scale: var(--tw-scale-x) var(--tw-scale-y);
+      }
+    }
+  }
+  .hover\:bg-\[\#\#1a58ac\] {
+    &:hover {
+      @media (hover: hover) {
+        background-color: ##1a58ac;
+      }
+    }
+  }
+  .hover\:bg-\[\#1a58ac\] {
+    &:hover {
+      @media (hover: hover) {
+        background-color: #1a58ac;
       }
     }
   }
