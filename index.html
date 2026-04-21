@@ -5,22 +5,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DVLD</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.css" rel="stylesheet" />
     <link href="./src/output.css" rel="stylesheet">
 </head>
 <body>
     <header class="bg-[#1e4b82] w-full py-3">
-        <div class="container">
-            <div class="flex items-center justify-between">
-                <div class="flex items-center gap-2">
+        <div class="container flex w-full items-center gap-4">
+          <div class="left-0">
+<!-- drawer init and show -->
+<div class="text-center bg-[#3379c5] rounded-full w-fit">
+ <button class="inline-flex items-center justify-center text-white bg-brand box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-4 focus:outline-none" type="button" data-drawer-target="drawer-navigation" data-drawer-show="drawer-navigation" aria-controls="drawer-navigation">
+ <i class="fa-solid fa-bars fa-xl"></i>
+ </button>
+</div>
+<!-- drawer component -->
+<div id="drawer-navigation" class="fixed bg-[#3379c5] top-0 left-0 z-40 h-screen p-4 overflow-y-auto transition-transform -translate-x-full bg-neutral-primary-soft w-fit border-e border-default" tabindex="-1" aria-labelledby="drawer-navigation-label">
+<div class="py-5 overflow-y-auto">
+    <ul class="space-y-2 font-medium">
+       <li>
+          <a href="#" class="flex items-center px-2 py-1.5 text-body rounded-base hover:bg-neutral-tertiary hover:text-fg-brand group text-white hover:bg-[#1a58ac] transition-all duration-100">
+             <i class="fa-solid fa-id-card fa-xl"></i>
+             <span class="ms-3">Applications</span>
+          </a>
+       </li>
+       <li>
+          <a href="#" class="flex items-center px-2 py-1.5 text-body rounded-base hover:bg-neutral-tertiary hover:text-fg-brand group text-white hover:bg-[#1a58ac] transition-all duration-100">
+             <i class="fa-solid fa-user fa-xl"></i>
+             <span class="ms-3">People</span>
+          </a>
+       </li>
+       <li>
+          <a href="#" class="flex items-center px-2 py-1.5 text-body rounded-base hover:bg-neutral-tertiary hover:text-fg-brand group text-white hover:bg-[#1a58ac] transition-all duration-100">
+             <i class="fa-solid fa-user fa-xl"></i>
+             <span class="ms-3">Drivers</span>
+          </a>
+       </li>
+       <li>
+          <a href="#" class="flex items-center px-2 py-1.5 text-body rounded-base hover:bg-neutral-tertiary hover:text-fg-brand group text-white hover:bg-[#1a58ac] transition-all duration-100">
+             <i class="fa-solid fa-user-group fa-xl"></i>
+             <span class="ms-3">Users</span>
+          </a>
+       </li>
+       <li>
+          <a href="#" class="flex items-center px-2 py-1.5 text-body rounded-base hover:bg-neutral-tertiary hover:text-fg-brand group text-white hover:bg-[#1a58ac] transition-all duration-100">
+              <i class="fa-solid fa-user-gear fa-xl"></i>
+             <span class="ms-3">Account Settings</span>
+          </a>
+       </li>
+       <li>
+           <form class="bg-white px-2 py-1 rounded-sm flex items-center gap-2 md:hidden">
+              <i class="fa-solid fa-magnifying-glass text-gray-400 text-sm"></i>
+               <input type="text" placeholder="Search..." class="outline-0 border-0 text-[#6A737C] text-[13px]"/>
+             </form>
+       </li>
+    </ul>
+ </div>
+</div>
+  </div>
+          <div class="flex items-center justify-evenly md:justify-between w-full">
+            <div class="flex items-center gap-2">
                     <img alt="Logo" src="./src/img/D-Logo.png"/>
-                    <h1 class="text-white text-2xl font-bold underline decoration-[#a3a3ad46] decoration-1 underline-offset-4">DVLD</h1>
-                    <div class="text-white text-xs border-l pl-2 border-[#a3a3ad46]">
+                    <h1 class="text-white text-2xl font-bold sm:underline decoration-[#a3a3ad46] decoration-1 underline-offset-4">DVLD</h1>
+                    <div class="text-white text-xs border-l pl-2 border-[#a3a3ad46] hidden lg:block">
                         <h2>Vehicle & Licnese</h2>
                         <h2>Management system</h2>
                     </div>
                 </div>
-                <div class="flex items-center gap-4">
-                    <form class="bg-white px-2 py-1 rounded-sm flex items-center gap-2">
+                <div class="flex items-center gap-6">
+                    <form class="bg-white px-2 py-1 rounded-sm flex items-center gap-2 max-md:hidden">
                         <i class="fa-solid fa-magnifying-glass text-gray-400 text-sm"></i>
                         <input type="text" placeholder="Search..." class="outline-0 border-0 text-[#6A737C] text-[13px]"/>
                     </form>
@@ -28,7 +80,7 @@
                         <i class="fa-solid fa-bell fa-xl text-white"></i>
                         <div class="rounded-full bg-red-500 text-white flex items-center justify-center size-4 text-xs absolute -top-2 -right-3"><span>1</span></div>
                     </button>
-                    <button class="bg-[#13335e] py-1 flex items-center px-2 rounded-md">
+                    <button class="bg-[#13335e] max-md:hidden py-1 flex items-center px-2 rounded-md">
                       <img src="./src/img/EleanorPena.png" alt="Elanor pena" class="size-7"/>
                       <select class="text-white bg-[#13335e] border-0">
                         <option>Admin</option>
@@ -38,29 +90,6 @@
             </div>
         </div>
     </header>
-    <section class="h-dvh bg-[#2d5f94] w-60">
-      <div class="flex flex-col">
-        <a href="#" class="pl-6 py-4 items-center flex  text-white gap-4 hover:bg-[#1a58ac] transition-all duration-100">
-          <i class="fa-solid fa-id-card fa-xl"></i>
-          <h2>Applications</h2>
-        </a>
-        <a href="#" class="pl-6 py-4 items-center flex  text-white gap-4 hover:bg-[#1a58ac] transition-all duration-100">
-          <i class="fa-solid fa-user fa-xl"></i>
-          <h2>People</h2>
-        </a>
-        <a href="#" class="pl-6 py-4 items-center flex  text-white gap-4 hover:bg-[#1a58ac] transition-all duration-100">
-          <i class="fa-solid fa-user fa-xl"></i>
-          <h2>Drivers</h2>
-        </a>
-        <a href="#" class="pl-6 py-4 items-center flex  text-white gap-4 hover:bg-[#1a58ac] transition-all duration-100">
-          <i class="fa-solid fa-user-group fa-xl"></i>
-          <h2>Users</h2>
-        </a>
-        <a href="#" class="pl-6 py-4 items-center flex  text-white gap-4 hover:bg-[#1a58ac] transition-all duration-100">
-          <i class="fa-solid fa-user-gear fa-xl"></i>
-          <h2>Account Settings</h2>
-        </a>
-      </div>
-    </section>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.js"></script>
 </body>
 </html>
